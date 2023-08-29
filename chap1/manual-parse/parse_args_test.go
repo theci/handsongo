@@ -7,9 +7,9 @@ import (
 
 func TestParseArgs(t *testing.T) {
 	type testConfig struct {
-		args []string
-		err  error
-		config
+		args []string		// 커맨드 라인 인수 입력값을 나타내는 문자열 슬라이스의 arg 필드
+		err  error			// 발생할 수 있는 에러를 포함하는 err 필드
+		config				// 반환된 config 객체의 값의 구조체를 임베딩한 config 구조체 필드
 	}
 	tests := []testConfig{
 		{
